@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/nanny-services/static/css/main.f855e6bc.css",
-    "main.js": "/nanny-services/static/js/main.317fa4a4.js",
-    "static/js/453.c8abddde.chunk.js": "/nanny-services/static/js/453.c8abddde.chunk.js",
-    "static/media/logo.svg": "/nanny-services/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/nanny-services/static/css/main.055d0041.css",
+    "main.js": "/nanny-services/static/js/main.a59d39de.js",
+    "static/media/HelveticaNeueCyr-Roman.ttf": "/nanny-services/static/media/HelveticaNeueCyr-Roman.0ca719c710b1fbd7e02f.ttf",
+    "static/media/HelveticaNeueCyr-Medium.ttf": "/nanny-services/static/media/HelveticaNeueCyr-Medium.bfdbae3c80f7aa49c618.ttf",
+    "static/media/HelveticaNeueCyr-Bold.ttf": "/nanny-services/static/media/HelveticaNeueCyr-Bold.613e930355ab0b59fc48.ttf",
+    "static/media/HelveticaNeueCyr-Roman.woff": "/nanny-services/static/media/HelveticaNeueCyr-Roman.0247694e510ebe67cce1.woff",
+    "static/media/HelveticaNeueCyr-Medium.woff": "/nanny-services/static/media/HelveticaNeueCyr-Medium.1c5a4d413294b14b36e0.woff",
+    "static/media/HelveticaNeueCyr-Bold.woff": "/nanny-services/static/media/HelveticaNeueCyr-Bold.e8ac3e02953308d54ad6.woff",
+    "static/media/HelveticaNeueCyr-Roman.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Roman.d59df5a538d671a54c79.woff2",
+    "static/media/HelveticaNeueCyr-Medium.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Medium.751c19bd96c1fdbe6c88.woff2",
+    "static/media/HelveticaNeueCyr-Bold.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Bold.a737902275e936eaf242.woff2",
     "index.html": "/nanny-services/index.html",
-    "main.f855e6bc.css.map": "/nanny-services/static/css/main.f855e6bc.css.map",
-    "main.317fa4a4.js.map": "/nanny-services/static/js/main.317fa4a4.js.map",
-    "453.c8abddde.chunk.js.map": "/nanny-services/static/js/453.c8abddde.chunk.js.map"
+    "main.055d0041.css.map": "/nanny-services/static/css/main.055d0041.css.map",
+    "main.a59d39de.js.map": "/nanny-services/static/js/main.a59d39de.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.317fa4a4.js"
+    "static/css/main.055d0041.css",
+    "static/js/main.a59d39de.js"
   ]
 }
