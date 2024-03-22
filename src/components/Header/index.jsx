@@ -1,13 +1,11 @@
 import { useSelector } from "react-redux";
 import HeaderStyled from "./HeaderStyled";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { selectIsLoggedIn } from "store/auth/selector";
 import NavList from "./NavList";
 import AuthNavList from "./AuthNavList";
 
-const Header = () => {
-  const location = useLocation();
-  const currentPage = location.pathname === "/" ? "true" : "";
+const Header = ({ currentPage }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (

@@ -4,14 +4,22 @@ export const WrapNavStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  margin-left: 20px;
 
-  width: 533px;
+  @media screen and (min-width: 768px) {
+    gap: 28px;
+  }
+  @media screen and (min-width: 1024px) {
+    gap: 50px;
+  }
 `;
 
 export const AuthListStyled = styled.ul`
   display: flex;
   gap: 8px;
   .auth-item {
+    height: 50px;
     border-radius: 30px;
     cursor: pointer;
 
@@ -28,6 +36,7 @@ export const AuthListStyled = styled.ul`
     }
   }
   .log {
+    width: 126px;
     padding: 14px 39px;
     border: 1px solid rgba(251, 251, 251, 0.4);
     background-color: ${(props) =>

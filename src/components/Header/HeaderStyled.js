@@ -1,22 +1,27 @@
 import styled from "styled-components";
 
 const HeaderStyled = styled.header`
-  position: sticky;
-  top: 0;
-  right: 0;
+  position: ${(props) => (props.current ? "fixed" : "sticky")};
+  top: ${(props) => (props.current ? "32px" : "0")};
   z-index: 12;
+  width: 100%;
   background-color: ${(props) =>
     props.current ? "transparent" : "var(--bg-accent)"};
-
+  border-bottom: ${(props) =>
+    props.current ? "1px solid var(--color-text-white)" : "none"};
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    max-width: 1440px;
+    padding: 20px 96px;
+    @media screen and (min-width: 1024px) {
+      gap: ${(props) => (props.current ? "200px" : "150px")};
+    }
 
-    max-width: 1184px;
-    height: 88px;
-    margin: 0 auto;
-    padding: 20px;
     .logo {
       font-weight: 500;
       font-size: 24px;
@@ -29,7 +34,10 @@ const HeaderStyled = styled.header`
       display: flex;
       align-items: center;
       align-content: center;
-      gap: 40px;
+      gap: 16px;
+      @media screen and (min-width: 768px) {
+        gap: 40px;
+      }
 
       .nav-item {
         a {

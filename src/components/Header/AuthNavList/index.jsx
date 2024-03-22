@@ -5,7 +5,7 @@ const AuthNavList = ({ currentPage }) => {
   return (
     <>
       {currentPage ? (
-        <WrapNavStyled>
+        <WrapNavStyled current={currentPage}>
           <ul className="nav-list">
             <li className="nav-item">
               <NavLink aria-label="Welcome page" to="/">
@@ -19,7 +19,7 @@ const AuthNavList = ({ currentPage }) => {
             </li>
           </ul>
 
-          <AuthListStyled>
+          <AuthListStyled current={currentPage}>
             <li className="auth-item log">Log In</li>
             <li className="auth-item reg">Registration</li>
           </AuthListStyled>
@@ -39,7 +39,7 @@ const AuthNavList = ({ currentPage }) => {
             </li>
           </ul>
 
-          <AuthListStyled>
+          <AuthListStyled current={currentPage}>
             <li className="auth-item log">Log In</li>
             <li className="auth-item reg">Registration</li>
           </AuthListStyled>

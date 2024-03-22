@@ -5,6 +5,6 @@ export const initialState = {
     email: "",
   },
   token: "",
-  isLoggedIn: true,
+  isLoggedIn: false,
   isRefreshing: true,
 };

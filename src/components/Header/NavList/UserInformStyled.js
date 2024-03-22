@@ -3,7 +3,14 @@ import styled from "styled-components";
 const UserInformStyled = styled.ul`
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 4px;
+  @media screen and (min-width: 768px) {
+    gap: 8px;
+  }
+  @media screen and (min-width: 1024px) {
+    gap: 24px;
+  }
+
   .user-inform-svg {
     display: flex;
     align-items: center;
@@ -27,7 +34,8 @@ const UserInformStyled = styled.ul`
     }
   }
   .user-inform-btn {
-    padding: 14px 39px;
+    width: 140px;
+    padding: 14px 38px;
     border: 1px solid rgba(251, 251, 251, 0.4);
     border-radius: 30px;
   }
