@@ -1,8 +1,10 @@
+import NanniesPageStyled from "./NanniesPageStyled";
+
 const NanniesPage = () => {
   return (
-    <div>
+    <NanniesPageStyled>
       <h1>NanniesPage</h1>
-    </div>
+    </NanniesPageStyled>
   );
 };
 

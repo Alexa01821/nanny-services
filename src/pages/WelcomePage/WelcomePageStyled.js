@@ -36,6 +36,8 @@ const WelcomePageStyled = styled.section`
     color: var(--color-text-white);
   }
   .hero-btn {
+    display: flex;
+    justify-content: space-between;
     width: 232px;
     height: 62px;
     padding: 18px 50px;
