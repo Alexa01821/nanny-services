@@ -9,13 +9,14 @@
   --bg-footer: rgba(87, 88, 103, 1);
   --gradient-hero: #121417;
   --bg-back-modal: rgba(11, 11, 11, 0.6);
+  --bg-reviewer: rgba(240, 63, 59, 0.2);
 
   /* text */
   --color-text-black: #11101c;
   --color-text-white: #fbfbfb;
   --color-text-gray: #8a8a89;
   --color-accent: #f03f3b;
-  --color-lists: #11101c;
+  --color-lists: rgba(17, 16, 28, 0.3);
   --color-price: #38cd3e;
 
   /* border */
@@ -113,6 +114,19 @@ a {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 64px 50px 100px 50px;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 152px 128px 100px 128px;
+  }
 }
 
 .btn {

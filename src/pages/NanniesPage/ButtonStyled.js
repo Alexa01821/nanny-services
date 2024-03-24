@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const NanniesPageStyled = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
+  .more-btn {
+    padding: 10px 20px;
+    margin: 64px auto 0;
+  }
 `;
-
 export default NanniesPageStyled;

@@ -1,7 +1,7 @@
 import { createSelector } from "@reduxjs/toolkit";
 import { selectFilters } from "store/filters/selector";
 
-export const selectNannies = (state) => state.nanny.nanniesData;
+export const selectNannies = (state) => state.nannies.nanniesData;
 
 export const selectFilteredNannies = createSelector(
   [selectNannies, selectFilters],

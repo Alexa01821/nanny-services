@@ -1,3 +1,3 @@
-export const selectFilters = (state) => state.filter.filtersNannies;
+export const selectFilters = (state) => state.filters.filtersNannies;
 export const selectFilterFavorite = (state) =>
-  state.filter.filtersFavoriteNannies;
+  state.filters.filtersFavoriteNannies;

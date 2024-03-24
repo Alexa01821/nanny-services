@@ -17,9 +17,6 @@ const HeaderStyled = styled.header`
     padding: 20px 60px;
     margin: 0 auto;
     gap: 10px;
-    @media screen and (min-width: 1240px) {
-      padding: 20px 96px;
-    }
 
     .logo {
       font-weight: 500;
