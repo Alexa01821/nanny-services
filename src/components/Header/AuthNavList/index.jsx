@@ -8,6 +8,8 @@ import { Notify } from "notiflix";
 import BasicModalWindow from "components/BasicModalWindow";
 import { logOut, refreshUser } from "store/auth/slice";
 import { useNavigate } from "react-router-dom";
+import LoginModal from "components/LoginModal";
+import RegistrationModal from "components/RegistrationModal";
 
 const AuthNavList = (currentPage) => {
   const dispatch = useDispatch();
@@ -74,11 +76,13 @@ const AuthNavList = (currentPage) => {
 
       {modalRegistration && (
         <BasicModalWindow toggleModal={handleModalRegistration}>
-          reg
+          <RegistrationModal toggleModal={handleModalRegistration} />
         </BasicModalWindow>
       )}
       {modalLogIn && (
-        <BasicModalWindow toggleModal={handleModalLogIn}>log</BasicModalWindow>
+        <BasicModalWindow toggleModal={handleModalLogIn}>
+          <LoginModal toggleModal={handleModalLogIn} />
+        </BasicModalWindow>
       )}
     </>
   );

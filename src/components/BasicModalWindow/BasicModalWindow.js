@@ -16,7 +16,7 @@ const BasicWindow = styled.div`
     position: absolute;
     overflow: hidden;
     padding: 40px;
-    background-color: var(--bg-body);
+    background-color: var(--color-text-white);
     border-radius: 24px;
 
     .modal-btn-close {

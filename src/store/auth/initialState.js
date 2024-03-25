@@ -6,5 +6,5 @@ export const initialState = {
   },
   token: "",
   isLoggedIn: false,
-  isRefreshing: true,
+  isRefreshing: false,
 };

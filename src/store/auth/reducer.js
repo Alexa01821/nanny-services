@@ -1,9 +1,9 @@
 const reducer = {
   getUser(state, action) {
-    state.id = action.payload.id;
+    state.user.id = action.payload.id;
     state.token = action.payload.token;
-    state.email = action.payload.email;
-    state.name = action.payload.name;
+    state.user.email = action.payload.email;
+    state.user.name = action.payload.name;
     state.isLoggedIn = true;
 
     localStorage.setItem("token", action.payload.token);
