@@ -4,7 +4,7 @@ const reducer = {
   },
   deleteFavoritesNannies(state, { payload }) {
     state.favoriteNanniesData = state.favoriteNanniesData.filter(
-      (item) => item.id !== payload
+      (item) => item.name !== payload.name
     );
   },
 };

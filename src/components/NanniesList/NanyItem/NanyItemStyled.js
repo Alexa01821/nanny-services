@@ -62,6 +62,7 @@ const NannyItemStyled = styled.li`
         flex-direction: row;
         align-items: center;
         gap: 16px;
+        margin-bottom: 8px;
 
         .icon-item {
           display: flex;
@@ -90,7 +91,7 @@ const NannyItemStyled = styled.li`
       }
     }
 
-    .favorite-btn {
+    /* .favorite-btn {
       position: absolute;
       top: 24px;
       right: 24px;
@@ -99,10 +100,13 @@ const NannyItemStyled = styled.li`
       justify-content: center;
       border: none;
       background-color: transparent;
-      .favorite-svg {
+      .favorite-svg-border {
         fill: var(--color-text-black);
       }
-    }
+      .favorite-svg-fill {
+        fill: var(--color-accent);
+      }
+    } */
 
     .nanny-title {
       font-weight: 500;

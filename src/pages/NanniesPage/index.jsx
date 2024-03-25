@@ -9,7 +9,7 @@ import { child, get } from "firebase/database";
 import { getNannies } from "store/nannies/slice";
 import { filtersNanniesAction } from "store/filters/slice";
 import { selectFilteredNannies } from "store/nannies/selector";
-import NanniesPageStyled from "./ButtonStyled";
+import NanniesPageStyled from "./NanniesPageStyled";
 
 const NanniesPage = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const NanniesPage = () => {
   const [selectedFilter, setSelectedFilter] = useState("A to Z");
   const [nannyData, setNannyData] = useState(null);
   const [limit, setLimit] = useState(3);
-  const [isModal, setIsModal] = useState(true);
+  const [isModal, setIsModal] = useState(false);
 
   const filteredNannies = useSelector(selectFilteredNannies);
   const nannies = filteredNannies.slice(0, limit);

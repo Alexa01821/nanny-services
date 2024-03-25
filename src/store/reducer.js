@@ -12,11 +12,19 @@ const persistConfig = {
   whitelist: ["token"],
 };
 const userPersistReducer = persistReducer(persistConfig, authReducer);
+const persistConfigFavorites = {
+  key: "favorites",
+  storage,
+};
+const favoritesNanniesPersistReducer = persistReducer(
+  persistConfigFavorites,
+  favoritesNanniesReducer
+);
 
 export const reducer = {
   auth: userPersistReducer,
   nannies: nanniesReducer,
-  favorites: favoritesNanniesReducer,
+  favorites: favoritesNanniesPersistReducer,
   filters: filtersReducer,
   appState: appReducer,
 };

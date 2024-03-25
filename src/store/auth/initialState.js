@@ -1,7 +1,7 @@
 export const initialState = {
   user: {
     id: "",
-    name: "baby",
+    name: "",
     email: "",
   },
   token: "",

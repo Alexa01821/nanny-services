@@ -1,7 +1,7 @@
 import { createSelector } from "@reduxjs/toolkit";
 import { selectFilterFavorite } from "store/filters/selector";
 
-export const selectFavorites = (state) => state.favorite.favoriteNanniesData;
+export const selectFavorites = (state) => state.favorites.favoriteNanniesData;
 export const selectFilteredNanniesFavorite = createSelector(
   [selectFavorites, selectFilterFavorite],
   (favorites, filter) => {

@@ -4,7 +4,7 @@ const reducer = {
     state.token = action.payload.token;
     state.email = action.payload.email;
     state.name = action.payload.name;
-    state.isLogin = true;
+    state.isLoggedIn = true;
 
     localStorage.setItem("token", action.payload.token);
     localStorage.setItem("name", action.payload.name);
@@ -13,13 +13,13 @@ const reducer = {
     state.id = "";
     state.token = "";
     state.email = "";
-    state.isLogin = false;
+    state.isLoggedIn = false;
     state.isRefreshing = false;
     localStorage.removeItem("token");
   },
   refreshUser(state, action) {
     state.isRefreshing = true;
-    state.isLogin = true;
+    state.isLoggedIn = true;
     state.token = localStorage.getItem("token");
     state.name = localStorage.getItem("name");
   },

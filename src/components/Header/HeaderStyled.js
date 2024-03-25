@@ -11,6 +11,7 @@ const HeaderStyled = styled.header`
     props.current ? "1px solid var(--color-text-white)" : "none"};
 
   .header-container {
+    max-width: ${(props) => (props.current ? "1440px" : "")};
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -1,17 +1,15 @@
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import StarIcon from "@mui/icons-material/Star";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { nanoid } from "nanoid";
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "store/auth/selector";
 import getAge from "helpers/getAge";
 import { useState } from "react";
 import NannyItemStyled from "./NanyItemStyled";
+import HeartIcon from "components/HeartIcon";
 
 const NannyItem = ({ nannyData, toggleModal }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const favorite = true;
   const [isShowMore, setIsShowMore] = useState(false);
   const {
     name,
@@ -51,13 +49,7 @@ const NannyItem = ({ nannyData, toggleModal }) => {
             </li>
           </ul>
         </div>
-        <button className="favorite-btn">
-          {favorite && isLoggedIn ? (
-            <FavoriteIcon className="favorite-svg" />
-          ) : (
-            <FavoriteBorderIcon className="favorite-svg" />
-          )}
-        </button>
+        {isLoggedIn && <HeartIcon nannyData={nannyData} />}
         <h3 className="nanny-title">{name}</h3>
         <ul className="wrap-details">
           <li className="detail-item">

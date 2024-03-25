@@ -1,7 +1,6 @@
 import React from "react";
 import NanniesListStyled from "./NanniesListStyled";
 import NannyItem from "./NanyItem";
-import { nanoid } from "nanoid";
 
 const NanniesList = ({ nanniesData, toggleModal }) => {
   return (
@@ -11,7 +10,7 @@ const NanniesList = ({ nanniesData, toggleModal }) => {
         {nanniesData.map((nanny) => {
           return (
             <NannyItem
-              key={nanoid()}
+              key={nanny.name}
               nannyData={nanny}
               toggleModal={toggleModal}
             />
