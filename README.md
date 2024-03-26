@@ -27,5 +27,5 @@ The project was created for educational purposes. With the help of this project,
 | npm run build | production build        |
 
 ## DemoVideo:
+./demo-video.mp4
 
-![Video](./assets/demo-video.mp4)
