@@ -10,6 +10,7 @@ import { getNannies } from "store/nannies/slice";
 import { filtersNanniesAction } from "store/filters/slice";
 import { selectFilteredNannies } from "store/nannies/selector";
 import NanniesPageStyled from "./NanniesPageStyled";
+import NannyModal from "components/NannyModal";
 
 const NanniesPage = () => {
   const dispatch = useDispatch();
@@ -41,15 +42,11 @@ const NanniesPage = () => {
         if (snapshot.exists()) {
           dispatch(getNannies(snapshot.val()));
         } else {
-          Notify.failure("Unfortunately we were unable to find nannies", {
-            timeout: 2000,
-          });
+          Notify.failure("Unfortunately we were unable to find nannies");
         }
       })
       .catch((error) => {
-        Notify.info("Oops, something went wrong", {
-          timeout: 2000,
-        });
+        Notify.info("Oops, something went wrong");
         console.log(error);
       });
   }, [dispatch]);
@@ -70,7 +67,15 @@ const NanniesPage = () => {
       )}
 
       {isModal && (
-        <BasicModalWindow toggleModal={toggleModal}></BasicModalWindow>
+        <BasicModalWindow toggleModal={toggleModal}>
+          <NannyModal
+            nannyData={{
+              name: nannyData.name,
+              avatar_url: nannyData.avatar_url,
+            }}
+            toggleModal={toggleModal}
+          />
+        </BasicModalWindow>
       )}
     </NanniesPageStyled>
   );

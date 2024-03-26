@@ -28,6 +28,8 @@ const LoginModal = ({ toggleModal }) => {
         };
 
         dispatch(getUser(UserCreation));
+        Notify.success(`You have successfully log in to your account`);
+
         toggleModal();
       })
       .catch((error) => {

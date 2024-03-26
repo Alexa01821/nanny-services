@@ -7,6 +7,7 @@ import Filters from "components/Filters";
 import NanniesList from "components/NanniesList";
 import { Link } from "react-router-dom";
 import BasicModalWindow from "components/BasicModalWindow";
+import NannyModal from "components/NannyModal";
 
 const FavoritesPage = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const FavoritesPage = () => {
       return !preModal;
     });
   };
-  console.log(nannies.length / 3 === 0);
+
   return (
     <FavoritesPageStyled className="container">
       <h1 className="is-hidden">Favorites Nannies Page</h1>
@@ -68,7 +69,15 @@ const FavoritesPage = () => {
       )}
 
       {isModal && (
-        <BasicModalWindow toggleModal={toggleModal}></BasicModalWindow>
+        <BasicModalWindow toggleModal={toggleModal}>
+          <NannyModal
+            nannyData={{
+              name: nannyFavoriteData.name,
+              avatar_url: nannyFavoriteData.avatar_url,
+            }}
+            toggleModal={toggleModal}
+          />
+        </BasicModalWindow>
       )}
     </FavoritesPageStyled>
   );

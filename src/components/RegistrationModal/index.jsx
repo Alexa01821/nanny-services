@@ -36,9 +36,7 @@ const RegistrationModal = ({ toggleModal }) => {
 
         dispatch(getUser(UserCreation));
 
-        Notify.success(
-          `You have successfully registered, log in to your account`
-        );
+        Notify.success(`You have successfully registered your account`);
         toggleModal();
       })
       .catch((error) => {
@@ -117,7 +115,7 @@ const RegistrationModal = ({ toggleModal }) => {
             />
           </label>
           <button type="submit" className="modal-btn btn">
-            Log in
+            Sign Up
           </button>
         </Form>
       </Formik>

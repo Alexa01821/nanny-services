@@ -17,10 +17,12 @@ const Layout = () => {
   }, [dispatch]);
   return (
     <>
-      <Header currentPage={currentPage} />
-      <main>
-        <Outlet />
-      </main>
+      <>
+        <Header currentPage={currentPage} />
+        <main>
+          <Outlet />
+        </main>
+      </>
     </>
   );
 };
