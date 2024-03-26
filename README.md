@@ -26,6 +26,7 @@ The project was created for educational purposes. With the help of this project,
 | npm run start | start local server      |
 | npm run build | production build        |
 
-## DemoVideo:
-./demo-video.mp4
+## DemoVideo
 
+You can watch a demo-video about "How work this project"
+![Video](./assets/demo-video.mp4)
