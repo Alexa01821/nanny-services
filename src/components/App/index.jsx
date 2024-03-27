@@ -3,23 +3,20 @@ import Layout from "components/Layout";
 import WelcomePage from "pages/WelcomePage";
 import NanniesPage from "pages/NanniesPage";
 import FavoritesPage from "pages/FavoritesPage";
-import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoggedIn } from "store/auth/selector";
 import { useEffect } from "react";
-import { refreshUser } from "store/auth/slice";
 import PrivateRoute from "./PrivateRoute";
+import { useSelector } from "react-redux";
 
 const App = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   useEffect(() => {
-    dispatch(refreshUser());
     if (isLoggedIn) {
       navigate("/");
     }
-  }, [dispatch]);
+  }, []);
 
   return (
     <>

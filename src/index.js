@@ -8,6 +8,8 @@ import App from "./components/App";
 import { Provider } from "react-redux";
 import { persistor, store } from "store/store";
 import Loader from "components/Loader";
+import { auth } from "./firebase";
+console.log(auth);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

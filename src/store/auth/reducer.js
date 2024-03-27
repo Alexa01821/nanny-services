@@ -10,9 +10,9 @@ const reducer = {
     localStorage.setItem("name", action.payload.name);
   },
   logOut(state, action) {
-    state.id = "";
+    state.user.id = "";
     state.token = "";
-    state.email = "";
+    state.user.email = "";
     state.isLoggedIn = false;
     state.isRefreshing = false;
     localStorage.removeItem("token");
@@ -21,7 +21,7 @@ const reducer = {
     state.isRefreshing = true;
     state.isLoggedIn = true;
     state.token = localStorage.getItem("token");
-    state.name = localStorage.getItem("name");
+    state.user.name = localStorage.getItem("name");
   },
 };
 

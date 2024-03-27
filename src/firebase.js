@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getDatabase, ref } from "firebase/database";
-
+// console.log(API_KEY);
 // https://firebase.google.com/docs/web/setup#available-libraries
 // const API_KEY = import.meta.env.VITE_API_KEY;
 const API_KEY = "AIzaSyD0bvwTAoLigKfLXkHI7Jv - NbvVzotl4lY";

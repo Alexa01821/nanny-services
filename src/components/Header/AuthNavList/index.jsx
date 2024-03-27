@@ -34,10 +34,10 @@ const AuthNavList = (currentPage) => {
       .then(() => {
         dispatch(logOut());
         navigate("/", { replace: true });
-        Notify.info("You have successfully logged out");
+        Notify.success("You have successfully logged out");
       })
       .catch((error) => {
-        Notify.info("Oops, something went wrong");
+        Notify.failure("Oops, something went wrong");
         console.log(error);
       });
   };
