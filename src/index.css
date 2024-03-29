@@ -118,14 +118,25 @@ a {
 
 .container {
   width: 100%;
+  padding: 0 16px;
   margin: 0 auto;
-  padding: 64px 50px 100px 50px;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 428px) {
   .container {
-    max-width: 1440px;
-    padding: 152px 128px 100px 128px;
+    width: 396px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 734px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1128px;
+    padding: 0 15px;
   }
 }
 

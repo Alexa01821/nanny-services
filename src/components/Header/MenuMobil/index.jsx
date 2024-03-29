@@ -1,17 +1,18 @@
+import MenuIcon from "@mui/icons-material/Menu";
+import MenuMobilStyled from "./MenuMobilStyled";
 import PersonIcon from "@mui/icons-material/Person";
-import { useDispatch, useSelector } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
 import { selectIsLoggedIn, selectUser } from "store/auth/selector";
-import { AuthListStyled, UserInformStyled } from "./AuthNavStyled";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { getAuth, signOut } from "firebase/auth";
-import { Notify } from "notiflix";
-import BasicModalWindow from "components/BasicModalWindow";
 import { logOut, refreshUser } from "store/auth/slice";
-import { useNavigate } from "react-router-dom";
+import { Notify } from "notiflix";
 import LoginModal from "components/LoginModal";
+import BasicModalWindow from "components/BasicModalWindow";
 import RegistrationModal from "components/RegistrationModal";
 
-const AuthNavList = ({ currentPage }) => {
+const MenuMobil = ({ toggleMenuMobil, currentPage }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -41,6 +42,7 @@ const AuthNavList = ({ currentPage }) => {
         console.log(error);
       });
   };
+
   useEffect(() => {
     if (isLoggedIn) {
       const token = localStorage.getItem("token");
@@ -51,18 +53,38 @@ const AuthNavList = ({ currentPage }) => {
   }, [dispatch, isLoggedIn]);
 
   return (
-    <>
+    <MenuMobilStyled>
+      <MenuIcon className="menu-btn-burger btn" onClick={toggleMenuMobil} />
+      <ul className="menu-burger-navigation" current={currentPage}>
+        <li className="nav-item">
+          <NavLink aria-label="Welcome page" to="/">
+            Home
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink aria-label="Nannies list page" to="/nannies">
+            Nannies
+          </NavLink>
+        </li>
+        {isLoggedIn && (
+          <li className="nav-item">
+            <NavLink aria-label="Nannies favorites list page" to="/favorites">
+              Favorites
+            </NavLink>
+          </li>
+        )}
+      </ul>
       {!isLoggedIn ? (
-        <AuthListStyled current={currentPage}>
+        <ul className="menu-burger-auth" current={currentPage}>
           <li className="auth-item log" onClick={handleModalLogIn}>
             Log In
           </li>
           <li className="auth-item reg" onClick={handleModalRegistration}>
             Registration
           </li>
-        </AuthListStyled>
+        </ul>
       ) : (
-        <UserInformStyled current={currentPage}>
+        <ul className="menu-burger-user" current={currentPage}>
           <li className="user-inform-svg">
             <PersonIcon className="svg" />
             <p className="user-inform-name">{name}</p>
@@ -70,9 +92,8 @@ const AuthNavList = ({ currentPage }) => {
           <li className="user-inform-btn btn" onClick={handleLogOut}>
             Log Out
           </li>
-        </UserInformStyled>
+        </ul>
       )}
-
       {modalRegistration && (
         <BasicModalWindow toggleModal={handleModalRegistration}>
           <RegistrationModal toggleModal={handleModalRegistration} />
@@ -83,8 +104,8 @@ const AuthNavList = ({ currentPage }) => {
           <LoginModal toggleModal={handleModalLogIn} />
         </BasicModalWindow>
       )}
-    </>
+    </MenuMobilStyled>
   );
 };
 
-export default AuthNavList;
+export default MenuMobil;

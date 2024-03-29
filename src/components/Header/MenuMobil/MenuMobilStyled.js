@@ -1,11 +1,62 @@
 import styled from "styled-components";
+const MenuMobilStyled = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100vw;
+  height: 250px;
+  background-color: var(--bg-accent);
+  .menu-btn-burger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .menu-burger-navigation {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 16px;
 
-export const AuthListStyled = styled.ul`
-  display: none;
-  @media screen and (min-width: 768px) {
+    .nav-item {
+      a {
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        color: var(--color-text-white);
+        transition: font-size var(--transition);
+
+        &:hover,
+        &:focus {
+          font-size: 20px;
+        }
+        &.active::after {
+          content: "";
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          left: 50%;
+          right: -50%;
+          top: 24px;
+          bottom: -24px;
+          background-color: var(--color-text-white);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .menu-burger-auth {
     display: flex;
     gap: 8px;
     .auth-item {
+      height: 50px;
       border-radius: 30px;
       cursor: pointer;
 
@@ -22,6 +73,7 @@ export const AuthListStyled = styled.ul`
       }
     }
     .log {
+      width: 126px;
       padding: 14px 39px;
       border: 1px solid rgba(251, 251, 251, 0.4);
       background-color: ${(props) =>
@@ -34,13 +86,11 @@ export const AuthListStyled = styled.ul`
       background-color: var(--bg-accent);
     }
   }
-`;
-export const UserInformStyled = styled.ul`
-  display: none;
-  @media screen and (min-width: 768px) {
+  .menu-burger-user {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 24px;
+
     .user-inform-svg {
       display: flex;
       align-items: center;
@@ -70,7 +120,8 @@ export const UserInformStyled = styled.ul`
       border-radius: 30px;
     }
   }
-  @media screen and (min-width: 1024px) {
-    gap: 10px;
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 `;
+export default MenuMobilStyled;
