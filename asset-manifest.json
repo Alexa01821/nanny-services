@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nanny-services/static/css/main.faceedbd.css",
-    "main.js": "/nanny-services/static/js/main.f4ecd71a.js",
+    "main.css": "/nanny-services/static/css/main.e11d671f.css",
+    "main.js": "/nanny-services/static/js/main.54e13913.js",
     "static/media/welcome-bg.jpg": "/nanny-services/static/media/welcome-bg.838a1457d1669b6610d5.jpg",
     "static/media/HelveticaNeueCyr-Roman.ttf": "/nanny-services/static/media/HelveticaNeueCyr-Roman.0ca719c710b1fbd7e02f.ttf",
     "static/media/HelveticaNeueCyr-Medium.ttf": "/nanny-services/static/media/HelveticaNeueCyr-Medium.bfdbae3c80f7aa49c618.ttf",
@@ -13,11 +13,11 @@
     "static/media/HelveticaNeueCyr-Medium.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Medium.751c19bd96c1fdbe6c88.woff2",
     "static/media/HelveticaNeueCyr-Bold.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Bold.a737902275e936eaf242.woff2",
     "index.html": "/nanny-services/index.html",
-    "main.faceedbd.css.map": "/nanny-services/static/css/main.faceedbd.css.map",
-    "main.f4ecd71a.js.map": "/nanny-services/static/js/main.f4ecd71a.js.map"
+    "main.e11d671f.css.map": "/nanny-services/static/css/main.e11d671f.css.map",
+    "main.54e13913.js.map": "/nanny-services/static/js/main.54e13913.js.map"
   },
   "entrypoints": [
-    "static/css/main.faceedbd.css",
-    "static/js/main.f4ecd71a.js"
+    "static/css/main.e11d671f.css",
+    "static/js/main.54e13913.js"
   ]
 }
