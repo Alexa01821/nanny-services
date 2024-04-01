@@ -22,5 +22,9 @@ const FavoritesPageStyled = styled.div`
       padding: 20px 40px;
     }
   }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1158px) {
+  }
 `;
 export default FavoritesPageStyled;

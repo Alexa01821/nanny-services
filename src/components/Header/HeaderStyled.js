@@ -10,10 +10,10 @@ const HeaderStyled = styled.header`
   border-bottom: ${(props) =>
     props.current ? "1px solid var(--color-text-white)" : "none"};
   .header-container {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: ${(props) =>
-      props.current ? "space-around" : "space-between"};
+    justify-content: space-between;
     padding: 20px;
     margin: 0 auto;
 
@@ -27,11 +27,15 @@ const HeaderStyled = styled.header`
   }
   .menu-burger-mobil {
   }
-
+  @media screen and (min-width: 428px) {
+    .header-container {
+      width: 396px;
+    }
+  }
   @media screen and (min-width: 768px) {
     top: ${(props) => (props.current ? "32px" : "0")};
     .header-container {
-      width: 690px;
+      width: 670px;
       .logo {
       }
     }
